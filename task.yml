@@ -1,0 +1,10 @@
+--- #task
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: INSTALL HTTPD ON CENTOS 9
+      action: yum name=httpd state=installed
+    - name: CREATE A USER ON CENTOS 9
+      action: user name=aryan
